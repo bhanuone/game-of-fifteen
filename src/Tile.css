@@ -1,0 +1,11 @@
+.tiles {
+  padding: 1em;
+  background-color: blanchedalmond;
+  font-size: 1.2em;
+  font-weight: bold;
+  border: 1px solid white;
+  flex: 1;
+  max-width: 32px;
+  height: 32px;
+  text-align: center;
+}
