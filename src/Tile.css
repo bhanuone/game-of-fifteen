@@ -4,8 +4,9 @@
   font-size: 1.2em;
   font-weight: bold;
   border: 1px solid white;
-  flex: 1;
-  max-width: 32px;
+  max-width: 48px;
+  min-width: 32px;
+  width: 32px;
   height: 32px;
   text-align: center;
 }

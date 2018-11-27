@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import Board from './Board';
+import GamePanel from './GamePanel';
 
 class App extends Component {
 
@@ -10,14 +10,12 @@ class App extends Component {
       </label>
     </div>
   )
+
   render() {
     return (
       <div className="app">
-        <h1>Game of Fifteen</h1>
-        <div className="game-panel">
-          <Board />
-
-        </div>
+        <h1 className="app-title">Game of Fifteen</h1>
+        <GamePanel />
       </div>
     );
   }

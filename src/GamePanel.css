@@ -1,0 +1,15 @@
+.game-panel {
+  display: flex;
+  flex-flow: row wrap;
+  background: lightblue;
+  margin: 1em;
+}
+
+.game-panel > * {
+  /* flex: 1; */
+  margin: 1em;
+}
+
+.game-info > *{
+  margin-bottom: 1em;
+}

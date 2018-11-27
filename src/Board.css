@@ -1,3 +1,8 @@
-.tiles-row {
+.row {
   display: flex;
+  flex-flow: row nowrap;
+}
+
+.row > * {
+  flex: 1;
 }
