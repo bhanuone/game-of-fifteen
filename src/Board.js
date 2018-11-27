@@ -67,17 +67,13 @@ class Board extends Component {
         let board = state.board.slice();
         board[state.blankX][state.blankY] = board[tileX][tileY];
         board[tileX][tileY] = '_';
-        if (won(this.state.board)) {
-          this.props.handleWon();
-        }
         return {board: board, blankX: tileX, blankY: tileY};
+      }, () => {
+        if(won(this.state.board)) this.props.handleWon();
       });
-      
+    } else {
+      alert('Invalid move');
     }
-  }
-
-  won() {
-    
   }
 
   /**
