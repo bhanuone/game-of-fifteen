@@ -76,6 +76,43 @@ class Board extends Component {
     }
   }
 
+  componentWillMount() {
+    document.addEventListener('keyup', (event) => this.handlePress(event));
+  }
+
+  handlePress(event) {
+    let tilePosition = this.getTilePosition(event.key);
+    if (tilePosition) {
+      this.handleClick(tilePosition.tileX, tilePosition.tileY);
+    }
+  }
+
+  getTilePosition(key) {
+    switch(key) {
+      case 'ArrowUp':
+      case 'w':
+      case 'W':
+        if (this.state.blankX === d - 1) return null;
+        return { tileX: this.state.blankX + 1, tileY: this.state.blankY };
+      case 'ArrowDown':
+      case 's':
+      case 'S':
+        if (this.state.blankX === 0) return null;
+        return { tileX: this.state.blankX - 1, tileY: this.state.blankY };
+      case 'ArrowLeft':
+      case 'a':
+      case 'A':
+        if (this.state.blankY === d - 1) return null;
+        return { tileX: this.state.blankX, tileY: this.state.blankY + 1 };
+      case 'ArrowRight':
+      case 'd':
+      case 'D':
+        if (this.state.blankY === 0) return null;
+        return { tileX: this.state.blankX, tileY: this.state.blankY - 1 };
+      default:
+        return null;
+    }
+  }
   /**
    * 
    * @param {number} x X position of the moving tile
